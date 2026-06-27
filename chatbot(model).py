@@ -125,7 +125,7 @@ if prompt := st.chat_input("Say something..."):
 
     # Get response
     with st.spinner("thinking..."):
-        response = model.invoke(prompt)
+        response = model.invoke(st.session_state.messages)
 
     # Append & show bot message
     st.session_state.messages.append(AIMessage(content=response.content))
