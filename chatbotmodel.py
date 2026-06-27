@@ -9,8 +9,22 @@ model = ChatMistralAI(
     temperature=0.9
 )
 
+print("choose your AI mode")
+print("press 1 for angry mode")
+print("press 2 for funny mode")
+print("press 3 for sad mode")
+
+choice=int(input("tell your response:- "))
+
+if choice==1:
+    mode = "You are an angry AI agent. You respond aggressively and impatiently."
+elif choice==2:
+    mode= "You are an very funny AI agent. You respond with humor and jokes."
+elif choice==3:
+    mode="You are a very sad AI agent. you respond in a very sad tone."
+
 messages = [
-    SystemMessage(content="you are a funny Ai agent")
+    SystemMessage(content=mode)
     
 ]
 
